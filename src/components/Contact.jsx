@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Send, MapPin, Phone } from 'lucide-react';
+import { Mail, Send, MapPin, Phone } from 'lucide-react';
+import { GitHub, LinkedIn, LeetCode, HackerRank } from './BrandIcons';
 
 const Contact = () => {
     return (
@@ -54,11 +55,17 @@ const Contact = () => {
                         <div className="pt-8">
                             <h4 className="font-bold mb-4 uppercase tracking-widest text-xs text-zinc-500">Social Profiles</h4>
                             <div className="flex space-x-4">
-                                <a href="https://github.com/JaswanthVasamsetti" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-700 transition-all">
-                                    <Github size={20} />
+                                <a href="https://github.com/jaswanth4237" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-700 transition-all">
+                                    <GitHub size={20} />
                                 </a>
-                                <a href="https://linkedin.com/in/jaswanthvasamsetti" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-700 transition-all">
-                                    <Linkedin size={20} />
+                                <a href="https://www.linkedin.com/in/jaswanth-vasamsetti-997079297/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-700 transition-all">
+                                    <LinkedIn size={20} />
+                                </a>
+                                <a href="https://leetcode.com/u/Vasamsetti_Jaswanth/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-700 transition-all">
+                                    <LeetCode size={20} />
+                                </a>
+                                <a href="https://www.hackerrank.com/profile/hackmail2110" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-700 transition-all">
+                                    <HackerRank size={20} />
                                 </a>
                             </div>
                         </div>
