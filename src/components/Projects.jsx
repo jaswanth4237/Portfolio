@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Package, Server, Smartphone, Database } from 'lucide-react';
+import { ExternalLink, Package, Server, Smartphone, Database } from 'lucide-react';
+import { GitHub } from './BrandIcons';
 
 const Projects = () => {
     const projects = [
@@ -101,7 +102,7 @@ const Projects = () => {
                                         rel="noopener noreferrer"
                                         className="text-zinc-400 hover:text-white transition-colors flex items-center text-sm font-medium"
                                     >
-                                        <Github size={18} className="mr-2" /> Code
+                                        <GitHub size={18} className="mr-2" /> Code
                                     </a>
                                     <a
                                         href="#"
