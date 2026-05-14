@@ -3,9 +3,9 @@ import { ArrowRight, Download } from 'lucide-react';
 
 const Hero = () => {
     const { scrollY } = useScroll();
-    const y1 = useTransform(scrollY, [0, 500], [0, 200]);
-    const y2 = useTransform(scrollY, [0, 500], [0, -150]);
-    const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+    const y1 = useTransform(scrollY, [0, 1000], [0, 150]);
+    const y2 = useTransform(scrollY, [0, 1000], [0, -100]);
+    const opacity = useTransform(scrollY, [0, 400], [1, 0]);
 
     return (
         <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
@@ -66,7 +66,7 @@ const Hero = () => {
                                 y: [-10, 10, -10],
                             }}
                             transition={{
-                                duration: 6,
+                                duration: 9,
                                 ease: "easeInOut",
                                 repeat: Infinity
                             }}
@@ -84,14 +84,14 @@ const Hero = () => {
                         {/* Behind Glow */}
                         <motion.div
                             animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-                            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
                             className="absolute bg-cyan-400 w-64 h-64 md:w-80 md:h-80 blur-[100px] rounded-full z-0"
                         />
 
                         {/* Floor Reflection */}
                         <motion.div
                             animate={{ scaleX: [1, 1.1, 1], opacity: [0.2, 0.4, 0.2] }}
-                            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                            transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
                             className="absolute -bottom-10 bg-cyan-300 w-64 md:w-96 h-12 blur-[40px] rounded-[100%] z-0"
                         />
 
