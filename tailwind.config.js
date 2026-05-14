@@ -8,11 +8,11 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#6366f1',
+          DEFAULT: '#38bdf8', // Light glowing blue
           foreground: '#ffffff',
         },
-        background: '#0a0a0a',
-        surface: '#161616',
+        background: '#040b16', // Deep sea dark blue
+        surface: '#0a1428', // Slightly lighter sea blue
       },
       fontFamily: {
         sans: ['Outfit', 'Inter', 'sans-serif'],
