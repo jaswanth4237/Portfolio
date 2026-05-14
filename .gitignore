@@ -7,7 +7,17 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+# Diagnostic reports (https://nodejs.org/api/report.html)
+node_report.csv
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Tailwind CSS
+# .tailwind/
+
+# Vite / React builds
 dist
 dist-ssr
 *.local
@@ -15,6 +25,7 @@ dist-ssr
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+!.vscode/settings.json
 .idea
 .DS_Store
 *.suo
@@ -22,3 +33,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# npm/Yarn/pnpm lock files (Optional: sometimes committed, but keeping here for completeness if you dont want them tracked)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
