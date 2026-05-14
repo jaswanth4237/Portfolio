@@ -9,7 +9,7 @@
 
   color-scheme: dark light;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #0a0a0a;
+  background-color: #040b16;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -34,19 +34,22 @@ body {
   .section-padding {
     @apply py-20 px-6 max-w-7xl mx-auto;
   }
-  
+
   .glass-card {
     @apply bg-zinc-900/50 backdrop-blur-md border border-zinc-800 rounded-2xl;
   }
-  
+
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-emerald-400;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-blue-600;
   }
 }
 
 /* Accessibility: Prefers Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
