@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import { GitHub, LinkedIn, LeetCode, HackerRank } from './BrandIcons';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -49,11 +50,17 @@ const Navbar = () => {
                         </motion.a>
                     ))}
                     <div className="flex items-center space-x-4 border-l border-zinc-800 pl-8">
-                        <a href="https://github.com/JaswanthVasamsetti" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
-                            <Github size={20} />
+                        <a href="https://github.com/jaswanth4237" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+                            <GitHub size={20} />
                         </a>
-                        <a href="https://linkedin.com/in/jaswanthvasamsetti" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
-                            <Linkedin size={20} />
+                        <a href="https://www.linkedin.com/in/jaswanth-vasamsetti-997079297/" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+                            <LinkedIn size={20} />
+                        </a>
+                        <a href="https://leetcode.com/u/Vasamsetti_Jaswanth/" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+                            <LeetCode size={20} />
+                        </a>
+                        <a href="https://www.hackerrank.com/profile/hackmail2110" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+                            <HackerRank size={20} />
                         </a>
                     </div>
                 </div>
