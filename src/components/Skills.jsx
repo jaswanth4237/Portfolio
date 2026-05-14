@@ -6,8 +6,7 @@ import {
     Terminal,
     Smartphone,
     Cpu,
-    Monitor,
-    Github
+    Monitor
 } from 'lucide-react';
 
 const Skills = () => {
