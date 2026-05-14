@@ -110,14 +110,14 @@ const Skills = () => {
                     {skillCategories.map((category, i) => (
                         <motion.div
                             key={category.title}
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: i * 0.1 }}
+                            initial={{ opacity: 0, y: i % 2 === 0 ? 60 : -60 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, margin: '-60px' }}
+                            transition={{ delay: i * 0.08, duration: 0.55, ease: 'easeOut' }}
                             className="glass-card p-6 group hover:border-primary/50 transition-all duration-300"
                         >
                             <div className="flex items-center space-x-3 mb-6">
-                                <div className="p-2 rounded-lg bg-zinc-800 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                <div className="p-2 rounded-lg bg-[#2d2d2d] text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                     {category.icon}
                                 </div>
                                 <h3 className="text-lg font-bold">{category.title}</h3>
@@ -126,7 +126,7 @@ const Skills = () => {
                                 {category.skills.map(skill => (
                                     <span
                                         key={skill}
-                                        className="px-3 py-1 text-xs font-medium bg-zinc-800/50 text-zinc-300 rounded-lg border border-zinc-700 hover:border-zinc-500 transition-colors"
+                                        className="px-3 py-1 text-xs font-medium bg-[#2d2d2d]/70 text-[#cccccc] rounded-lg border border-border hover:border-[#4d4d4d] transition-colors"
                                     >
                                         {skill}
                                     </span>

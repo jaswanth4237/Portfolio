@@ -8,8 +8,8 @@
   font-weight: 400;
 
   color-scheme: dark light;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #040b16;
+  color: #cccccc;
+  background-color: #1e1e1e;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,7 +26,8 @@ body {
 
 @layer base {
   body {
-    @apply bg-background text-zinc-100;
+    @apply bg-background;
+    color: #cccccc;
   }
 }
 
@@ -36,11 +37,11 @@ body {
   }
 
   .glass-card {
-    @apply bg-zinc-900/50 backdrop-blur-md border border-zinc-800 rounded-2xl;
+    @apply bg-surface/90 backdrop-blur-md border border-[#3c3c3c] rounded-2xl;
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-blue-600;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#9cdcfe] to-[#007acc];
   }
 }
 
@@ -63,9 +64,15 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-background;
+  background: #1e1e1e;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-zinc-800 rounded-full hover:bg-zinc-700 transition-colors;
+  background: #3c3c3c;
+  border-radius: 9999px;
+  transition: background 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4d4d4d;
 }

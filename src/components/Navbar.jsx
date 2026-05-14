@@ -24,7 +24,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-background/80 backdrop-blur-lg border-b border-zinc-800 py-3' : 'bg-transparent py-5'}`}>
+        <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-background/95 backdrop-blur-lg border-b border-border py-3' : 'bg-transparent py-5'}`}>
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 <motion.a
                     href="#"
@@ -44,29 +44,29 @@ const Navbar = () => {
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.1 }}
-                            className="text-sm font-medium text-zinc-400 hover:text-white transition-colors"
+                            className="text-sm font-medium text-[#808080] hover:text-white transition-colors"
                         >
                             {link.name}
                         </motion.a>
                     ))}
-                    <div className="flex items-center space-x-4 border-l border-zinc-800 pl-8">
-                        <a href="https://github.com/jaswanth4237" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+                    <div className="flex items-center space-x-4 border-l border-border pl-8">
+                        <a href="https://github.com/jaswanth4237" target="_blank" rel="noopener noreferrer" className="text-[#808080] hover:text-white transition-colors">
                             <GitHub size={20} />
                         </a>
-                        <a href="https://www.linkedin.com/in/jaswanth-vasamsetti-997079297/" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+                        <a href="https://www.linkedin.com/in/jaswanth-vasamsetti-997079297/" target="_blank" rel="noopener noreferrer" className="text-[#808080] hover:text-white transition-colors">
                             <LinkedIn size={20} />
                         </a>
-                        <a href="https://leetcode.com/u/Vasamsetti_Jaswanth/" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+                        <a href="https://leetcode.com/u/Vasamsetti_Jaswanth/" target="_blank" rel="noopener noreferrer" className="text-[#808080] hover:text-white transition-colors">
                             <LeetCode size={20} />
                         </a>
-                        <a href="https://www.hackerrank.com/profile/hackmail2110" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+                        <a href="https://www.hackerrank.com/profile/hackmail2110" target="_blank" rel="noopener noreferrer" className="text-[#808080] hover:text-white transition-colors">
                             <HackerRank size={20} />
                         </a>
                     </div>
                 </div>
 
                 {/* Mobile Toggle */}
-                <button className="md:hidden text-zinc-400 hover:text-white" onClick={() => setIsOpen(!isOpen)}>
+                <button className="md:hidden text-[#808080] hover:text-white" onClick={() => setIsOpen(!isOpen)}>
                     {isOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
             </div>
@@ -78,7 +78,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-surface border-b border-zinc-800 overflow-hidden"
+                        className="md:hidden bg-surface border-b border-border overflow-hidden"
                     >
                         <div className="px-6 py-8 flex flex-col space-y-6">
                             {navLinks.map((link) => (
@@ -86,7 +86,7 @@ const Navbar = () => {
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="text-lg font-medium text-zinc-400 hover:text-white transition-colors"
+                                    className="text-lg font-medium text-[#808080] hover:text-white transition-colors"
                                 >
                                     {link.name}
                                 </a>

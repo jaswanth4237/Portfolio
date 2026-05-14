@@ -147,7 +147,7 @@ const About = () => {
                 </h2>
 
                 <div className="grid lg:grid-cols-2 gap-16">
-                    <div className="space-y-6 text-zinc-400 text-lg">
+                    <div className="space-y-6 text-[#b3b3b3] text-lg">
                         <p>
                             I am a <span className="text-white">Flutter & Full Stack Developer</span> with a deep interest in Artificial Intelligence and Machine Learning. Currently in my second year of B.Tech, I bridge the gap between clean UI and robust backend architecture.
                         </p>
@@ -159,7 +159,7 @@ const About = () => {
                             <h3 className="text-xl font-semibold text-white flex items-center">
                                 <GraduationCap className="mr-3 text-primary" size={24} /> Education
                             </h3>
-                            <div className="space-y-6 border-l-2 border-zinc-800 pl-6 ml-3">
+                            <div className="space-y-6 border-l-2 border-border pl-6 ml-3">
                                 {education.map((edu, i) => (
                                     <motion.div
                                         key={i}
@@ -169,7 +169,7 @@ const About = () => {
                                         transition={{ delay: i * 0.15, duration: 0.5, ease: 'easeOut' }}
                                         className="relative"
                                     >
-                                        <div className="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-zinc-900 border-2 border-primary" />
+                                        <div className="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-surface border-2 border-primary" />
                                         <h4 className="font-bold text-white">{edu.school}</h4>
                                         <p className="text-sm text-zinc-400">{edu.degree} • {edu.period}</p>
                                         <p className="text-primary font-medium mt-1">{edu.score}</p>
@@ -191,7 +191,7 @@ const About = () => {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: false, margin: '-60px' }}
                                     transition={{ delay: i * 0.15, duration: 0.55, ease: 'easeOut' }}
-                                    className="glass-card p-6 hover:border-zinc-700 transition-colors"
+                                    className="glass-card p-6 hover:border-[#4d4d4d] transition-colors"
                                 >
                                     <div className="flex justify-between items-start mb-2">
                                         <h4 className="font-bold text-white">{exp.title}</h4>

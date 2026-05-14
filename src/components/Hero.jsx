@@ -26,7 +26,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     style={{ opacity }}
                 >
-                    <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-medium text-zinc-400 mb-6">
+                    <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-surface border border-border text-xs font-medium text-[#808080] mb-6">
                         <span className="relative flex h-2 w-2">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -38,16 +38,16 @@ const Hero = () => {
                         Hi, I&apos;m <span className="text-gradient">Jaswanth</span>
                     </h1>
 
-                    <p className="text-xl text-zinc-400 mb-8 max-w-lg leading-relaxed">
+                    <p className="text-xl text-[#b3b3b3] mb-8 max-w-lg leading-relaxed">
                         A <span className="text-white font-medium">Flutter & Full Stack Developer</span> and AI & ML enthusiast. I build scalable mobile apps and robust backend systems with modern architectures.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <a href="#projects" className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white text-black font-semibold hover:bg-zinc-200 transition-colors group">
+                        <a href="#projects" className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary text-white font-semibold hover:bg-[#1a8fe3] transition-colors group">
                             View My Work
                             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
                         </a>
-                        <a href="mailto:24p35a4237@acet.ac.in" className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-surface border border-zinc-800 font-semibold hover:bg-zinc-900 transition-colors">
+                        <a href="mailto:24p35a4237@acet.ac.in" className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-surface border border-border font-semibold hover:bg-[#2d2d2d] transition-colors">
                             Get in Touch
                         </a>
                     </div>

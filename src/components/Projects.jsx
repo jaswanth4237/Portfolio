@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Package, Server, Smartphone, Database } from 'lucide-react';
+import { Package, Server, Smartphone, Database } from 'lucide-react';
 import { GitHub } from './BrandIcons';
 import IsometricRoom from './IsometricRoom';
 
@@ -125,18 +125,18 @@ const Projects = () => {
                     {projects.map((project, i) => (
                         <motion.div
                             key={project.title}
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 0, y: i % 2 === 0 ? 80 : -80 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: i * 0.1, duration: 0.5 }}
+                            viewport={{ once: false, margin: '-60px' }}
+                            transition={{ delay: i * 0.08, duration: 0.6, ease: 'easeOut' }}
                             className="glass-card overflow-hidden flex flex-col group"
                         >
                             <div className="p-8 pb-4">
-                                <div className="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                                <div className="w-12 h-12 rounded-xl bg-[#2d2d2d] flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
                                     {project.icon}
                                 </div>
                                 <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors text-white">{project.title}</h3>
-                                <p className="text-sm text-zinc-400 mb-6 leading-relaxed line-clamp-3">
+                                <p className="text-sm text-[#b3b3b3] mb-6 leading-relaxed line-clamp-3">
                                     {project.description}
                                 </p>
                             </div>
@@ -144,7 +144,7 @@ const Projects = () => {
                             <div className="mt-auto p-8 pt-0">
                                 <div className="flex flex-wrap gap-2 mb-6">
                                     {project.tech.map(t => (
-                                        <span key={t} className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 px-2 py-1 rounded bg-zinc-900 border border-zinc-800">
+                                        <span key={t} className="text-[10px] font-bold uppercase tracking-wider text-[#808080] px-2 py-1 rounded bg-surface border border-border">
                                             {t}
                                         </span>
                                     ))}
@@ -155,15 +155,9 @@ const Projects = () => {
                                         href={project.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-zinc-400 hover:text-white transition-colors flex items-center text-sm font-medium"
+                                        className="text-[#808080] hover:text-white transition-colors flex items-center text-sm font-medium"
                                     >
                                         <GitHub size={18} className="mr-2" /> Code
-                                    </a>
-                                    <a
-                                        href="#"
-                                        className="text-zinc-400 hover:text-white transition-colors flex items-center text-sm font-medium"
-                                    >
-                                        <ExternalLink size={18} className="mr-2" /> Live
                                     </a>
                                 </div>
                             </div>

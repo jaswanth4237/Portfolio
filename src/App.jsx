@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Loader from './components/Loader';
 import Background3D from './components/Background3D';
+import MouseCursor from './components/MouseCursor';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,8 +23,9 @@ function App() {
       </AnimatePresence>
 
       <Background3D />
+      <MouseCursor />
 
-      <div className={`min-h-screen text-zinc-100 selection:bg-primary/30 selection:text-primary-foreground relative z-0 ${isLoading ? 'h-screen overflow-hidden' : ''}`}>
+      <div className={`min-h-screen text-[#cccccc] selection:bg-primary/35 selection:text-white relative z-0 ${isLoading ? 'h-screen overflow-hidden' : ''}`}>
         {!isLoading && (
           <>
             <Navbar />

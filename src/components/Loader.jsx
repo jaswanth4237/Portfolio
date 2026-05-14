@@ -35,14 +35,14 @@ const Loader = ({ onComplete }) => {
 
     return (
         <motion.div
-            className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#030614] overflow-hidden"
+            className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background overflow-hidden"
             initial={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
         >
             <div className="w-full max-w-md px-8 relative">
                 {/* Percentage Counter */}
                 <div className="flex justify-end mb-2">
-                    <span className="text-xs font-mono font-semibold text-slate-100 tracking-widest">
+                    <span className="text-xs font-mono font-semibold text-white tracking-widest">
                         {Math.round(progress)}%
                     </span>
                 </div>
@@ -56,7 +56,7 @@ const Loader = ({ onComplete }) => {
                                 key={index}
                                 initial={false}
                                 animate={{
-                                    backgroundColor: isActive ? '#e2e8f0' : '#1e293b',
+                                    backgroundColor: isActive ? '#007acc' : '#3c3c3c',
                                     scale: isActive ? 1.0 : 0.9,
                                 }}
                                 transition={{ duration: 0.2 }}
@@ -68,7 +68,7 @@ const Loader = ({ onComplete }) => {
 
                 {/* Loading Text */}
                 <div className="flex justify-start">
-                    <span className="text-[10px] font-mono font-bold text-slate-400 tracking-[0.2em]">
+                    <span className="text-[10px] font-mono font-bold text-[#808080] tracking-[0.2em]">
                         LOADING CONTENT
                     </span>
                 </div>
