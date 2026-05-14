@@ -12,11 +12,11 @@ const Hero = () => {
             {/* Background Decorative Elements (Parallax) */}
             <motion.div
                 style={{ y: y1 }}
-                className="absolute top-1/4 -right-20 w-96 h-96 bg-primary/20 rounded-full blur-[120px] -z-10"
+                className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-sky-900/30 via-background to-background -z-20"
             />
             <motion.div
                 style={{ y: y2 }}
-                className="absolute bottom-1/4 -left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-[100px] -z-10"
+                className="absolute bottom-0 absolute left-0 w-full h-3/4 bg-[radial-gradient(ellipse_at_bottom_center,_var(--tw-gradient-stops))] from-cyan-900/40 via-background to-transparent -z-10"
             />
 
             <div className="section-padding grid md:grid-cols-2 gap-12 items-center">
@@ -59,32 +59,61 @@ const Hero = () => {
                     transition={{ duration: 1, ease: "easeOut" }}
                     className="relative"
                 >
-                    <div className="aspect-square rounded-3xl bg-gradient-to-br from-zinc-800 to-zinc-950 border border-zinc-800 overflow-hidden relative group">
-                        {/* Inner glow */}
-                        <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors duration-500" />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <span className="text-8xl select-none opacity-20 group-hover:opacity-30 transition-opacity duration-500">VJ</span>
-                        </div>
+                    <div className="relative w-full aspect-square flex items-center justify-center">
+                        {/* Profile Picture */}
+                        <motion.div
+                            animate={{
+                                y: [-10, 10, -10],
+                            }}
+                            transition={{
+                                duration: 6,
+                                ease: "easeInOut",
+                                repeat: Infinity
+                            }}
+                            className="relative w-64 h-80 md:w-80 md:h-96 z-10 drop-shadow-[0_0_30px_rgba(56,189,248,0.5)] rounded-3xl overflow-hidden border border-cyan-500/30"
+                        >
+                            <img
+                                src="/profile.jpg"
+                                alt="Jaswanth"
+                                className="w-full h-full object-cover"
+                            />
+                            {/* Inner glowing facets */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent mix-blend-overlay" />
+                        </motion.div>
+
+                        {/* Behind Glow */}
+                        <motion.div
+                            animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+                            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute bg-cyan-400 w-64 h-64 md:w-80 md:h-80 blur-[100px] rounded-full z-0"
+                        />
+
+                        {/* Floor Reflection */}
+                        <motion.div
+                            animate={{ scaleX: [1, 1.1, 1], opacity: [0.2, 0.4, 0.2] }}
+                            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute -bottom-10 bg-cyan-300 w-64 md:w-96 h-12 blur-[40px] rounded-[100%] z-0"
+                        />
+
+                        {/* Stats Cards Reveal on scroll */}
+                        <motion.div
+                            initial={{ x: 50, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            className="absolute -right-2 md:-right-6 top-1/4 glass-card p-4 shadow-2xl z-20 border-cyan-900/50 bg-background/40"
+                        >
+                            <p className="text-2xl font-bold text-sky-100">8.59</p>
+                            <p className="text-xs text-sky-400 uppercase tracking-widest">Current CGPA</p>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ x: -50, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            className="absolute -left-2 md:-left-6 bottom-1/4 glass-card p-4 shadow-2xl z-20 border-cyan-900/50 bg-background/40"
+                        >
+                            <p className="text-2xl font-bold text-sky-100">5+</p>
+                            <p className="text-xs text-sky-400 uppercase tracking-widest">Live Projects</p>
+                        </motion.div>
                     </div>
-
-                    {/* Stats Cards Reveal on scroll */}
-                    <motion.div
-                        initial={{ x: 50, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        className="absolute -right-6 top-1/4 glass-card p-4 shadow-2xl"
-                    >
-                        <p className="text-2xl font-bold">8.59</p>
-                        <p className="text-xs text-zinc-500 uppercase tracking-widest">Current CGPA</p>
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ x: -50, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        className="absolute -left-6 bottom-1/4 glass-card p-4 shadow-2xl"
-                    >
-                        <p className="text-2xl font-bold">5+</p>
-                        <p className="text-xs text-zinc-500 uppercase tracking-widest">Live Projects</p>
-                    </motion.div>
                 </motion.div>
             </div>
         </section>
