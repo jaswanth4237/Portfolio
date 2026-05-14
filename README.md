@@ -1,16 +1,64 @@
-# React + Vite
+# Vasamsetti Jaswanth - Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A visually stunning, fully responsive personal portfolio designed with deep-sea aesthetics, dynamic animations, and a seamless user experience. Built using React, Vite, Tailwind CSS, and Framer Motion.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+*(Insert your Live Vercel/Netlify URL here)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
+- **Frontend**: React (Vite)
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React & Custom SVGs (LeetCode, HackerRank)
+- **Deployment**: Vercel / Netlify
 
-## React Compiler
+## ✨ Features
+- **Cinematic Loader**: A custom-built loading screen with percentage progress, grid boxes, and a sleek monochromatic terminal vibe.
+- **Deep-Sea Aesthetics**: A custom Tailwind config featuring `#040b16` oceanic backgrounds, glowing cyan radial gradients, and glowing accents.
+- **Floating Profile / Artifact Intro**: Profile picture framed within a glowing, floating, and pulsating container using Framer Motion.
+- **Responsive Design**: Flawlessly optimized for mobile, tablet, and desktop.
+- **Glassmorphism**: Modern UI aesthetic using backdrop blurs and semi-transparent layers.
+- **Social Integrations**: Built-in connections to GitHub, LinkedIn, LeetCode, and HackerRank.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📦 Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/jaswanth4237/portfolio.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd portfolio
+   ```
+3. Add your Profile Picture:
+   Make sure you download your profile picture, name it exactly `profile.jpg`, and drop it into the `public/` directory!
+4. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running Locally
+To start the development server:
+```bash
+npm run dev
+```
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Building for Production
+To create a production build spanning minified and transpiled assets:
+```bash
+npm run build
+```
+
+## 👤 Author
+**Vasamsetti Jaswanth**
+- **GitHub**: [@jaswanth4237](https://github.com/jaswanth4237)
+- **LinkedIn**: [Jaswanth Vasamsetti](https://www.linkedin.com/in/jaswanth-vasamsetti-997079297/)
+- **LeetCode**: [Vasamsetti_Jaswanth](https://leetcode.com/u/Vasamsetti_Jaswanth/)
+- **HackerRank**: [hackmail2110](https://www.hackerrank.com/profile/hackmail2110)
+- **Email**: 24p35a4237@acet.ac.in
