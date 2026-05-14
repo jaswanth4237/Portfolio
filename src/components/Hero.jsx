@@ -12,11 +12,11 @@ const Hero = () => {
             {/* Background Decorative Elements (Parallax) */}
             <motion.div
                 style={{ y: y1 }}
-                className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-sky-900/30 via-background to-background -z-20"
+                className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-sky-900/30 via-transparent to-transparent -z-20"
             />
             <motion.div
                 style={{ y: y2 }}
-                className="absolute bottom-0 absolute left-0 w-full h-3/4 bg-[radial-gradient(ellipse_at_bottom_center,_var(--tw-gradient-stops))] from-cyan-900/40 via-background to-transparent -z-10"
+                className="absolute bottom-0 left-0 w-full h-3/4 bg-[radial-gradient(ellipse_at_bottom_center,_var(--tw-gradient-stops))] from-cyan-900/40 via-transparent to-transparent -z-10"
             />
 
             <div className="section-padding grid md:grid-cols-2 gap-12 items-center">

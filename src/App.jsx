@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Loader from './components/Loader';
+import Background3D from './components/Background3D';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -20,7 +21,9 @@ function App() {
         )}
       </AnimatePresence>
 
-      <div className={`bg-background min-h-screen text-zinc-100 selection:bg-primary/30 selection:text-primary-foreground ${isLoading ? 'h-screen overflow-hidden' : ''}`}>
+      <Background3D />
+
+      <div className={`min-h-screen text-zinc-100 selection:bg-primary/30 selection:text-primary-foreground relative z-0 ${isLoading ? 'h-screen overflow-hidden' : ''}`}>
         {!isLoading && (
           <>
             <Navbar />
