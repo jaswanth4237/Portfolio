@@ -1,138 +1,111 @@
 import { motion } from 'framer-motion';
-import {
-    Code2,
-    Database,
-    Layers,
-    Terminal,
-    Smartphone,
-    Cpu,
-    Monitor
-} from 'lucide-react';
+
+const TechIcon = ({ name, color, label }) => (
+    <motion.div
+        whileHover={{ x: 5 }}
+        className="flex items-center space-x-3 group cursor-default"
+    >
+        <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-[#1e1e1e] border border-[#333333] group-hover:border-primary/50 group-hover:shadow-[0_0_15px_rgba(14,165,233,0.1)] transition-all duration-300 p-2">
+            <img
+                src={`https://cdn.simpleicons.org/${name}/${color || 'cccccc'}`}
+                alt={label}
+                className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500"
+            />
+        </div>
+        <span className="text-base font-medium text-[#808080] group-hover:text-white transition-colors tracking-wide">
+            {label}
+        </span>
+    </motion.div>
+);
 
 const Skills = () => {
-    const skillCategories = [
+    const categories = [
         {
-            title: "Languages",
-            icon: <Code2 size={20} />,
-            skills: ["Dart", "Python", "Java", "JavaScript", "Node.js"]
+            id: "MOBILE",
+            skills: [
+                { name: "flutter", color: "02569B", label: "Flutter" },
+                { name: "dart", color: "0175C2", label: "Dart" },
+                { name: "android", color: "3DDC84", label: "Android" },
+                { name: "ios", color: "000000", label: "iOS" },
+                { name: "blueprint", color: "137CBD", label: "MVVM/Bloc" }
+            ]
         },
         {
-            title: "Mobile",
-            icon: <Smartphone size={20} />,
-            skills: ["Flutter", "Riverpod", "Bloc", "MVVM"]
+            id: "BACKEND",
+            skills: [
+                { name: "nodedotjs", color: "339933", label: "Node.js" },
+                { name: "express", color: "ffffff", label: "Express.js" },
+                { name: "nestjs", color: "E0234E", label: "NestJS" },
+                { name: "apachekafka", color: "ffffff", label: "Kafka" },
+                { name: "python", color: "3776AB", label: "Python" }
+            ]
         },
         {
-            title: "Backend",
-            icon: <Layers size={20} />,
-            skills: ["Kafka", "CQRS", "Event Sourcing", "REST APIs"]
+            id: "DATABASE",
+            skills: [
+                { name: "mysql", color: "4479A1", label: "MySQL" },
+                { name: "postgresql", color: "4169E1", label: "PostgreSQL" },
+                { name: "mongodb", color: "47A248", label: "MongoDB" },
+                { name: "firebase", color: "FFCA28", label: "Firebase" },
+                { name: "sqlite", color: "003B57", label: "Hive/SQLite" }
+            ]
         },
         {
-            title: "Databases",
-            icon: <Database size={20} />,
-            skills: ["MySQL", "PostgreSQL", "MongoDB", "Hive"]
-        },
-        {
-            title: "Tools & DevOps",
-            icon: <Terminal size={20} />,
-            skills: ["Git", "Docker", "GitHub Actions", "CI/CD"]
-        },
-        {
-            title: "AI & ML",
-            icon: <Cpu size={20} />,
-            skills: ["Generative AI", "Data Structures", "Algorithms"]
+            id: "DEV TOOLS",
+            skills: [
+                { name: "docker", color: "2496ED", label: "Docker" },
+                { name: "git", color: "F05032", label: "Git" },
+                { name: "githubactions", color: "2088FF", label: "CI/CD" },
+                { name: "postman", color: "FF6C37", label: "Postman" }
+            ]
         }
     ];
 
     return (
-        <section id="skills" className="section-padding scroll-mt-20 relative">
-            <div className="absolute top-[10%] left-[-5%] w-32 h-32 md:w-56 md:h-56 pointer-events-none -z-10 opacity-80" style={{ perspective: '1000px' }}>
-                <motion.div
-                    className="w-full h-full"
-                    animate={{ y: [-20, 20, -20], rotateZ: [0, 360], rotateX: 60 }}
-                    transition={{
-                        y: { duration: 8, repeat: Infinity, ease: "easeInOut" },
-                        rotateZ: { duration: 25, repeat: Infinity, ease: "linear" }
-                    }}
-                    style={{ transformStyle: 'preserve-3d' }}
-                >
-                    <div className="absolute inset-0 rounded-[2rem] border border-cyan-300/40 bg-cyan-900/20 backdrop-blur-sm shadow-[0_0_40px_rgba(6,182,212,0.3)]" style={{ transform: 'translateZ(-60px)' }} />
-                    <div className="absolute inset-0 rounded-[2rem] border border-cyan-200/50 bg-cyan-600/20 backdrop-blur-md shadow-[0_0_40px_rgba(6,182,212,0.3)]" style={{ transform: 'translateZ(-30px)' }} />
-                    <div className="absolute inset-0 rounded-[2rem] border-2 border-cyan-100/60 bg-cyan-400/20 backdrop-blur-lg shadow-[0_0_60px_rgba(6,182,212,0.5)_inset]" />
-                </motion.div>
-            </div>
-
-            {/* Opposite side: glowing spinning circle/orb */}
-            <div className="absolute top-[40%] right-[-3%] w-28 h-28 md:w-52 md:h-52 pointer-events-none -z-10 opacity-70">
-                <motion.div
-                    className="w-full h-full rounded-full border-2 border-cyan-400/30 bg-transparent"
-                    animate={{
-                        y: [-15, 15, -15],
-                        rotateZ: [360, 0],
-                        boxShadow: [
-                            '0 0 30px rgba(6,182,212,0.2), 0 0 60px rgba(6,182,212,0.1) inset',
-                            '0 0 60px rgba(6,182,212,0.5), 0 0 100px rgba(6,182,212,0.3) inset',
-                            '0 0 30px rgba(6,182,212,0.2), 0 0 60px rgba(6,182,212,0.1) inset',
-                        ]
-                    }}
-                    transition={{
-                        y: { duration: 9, repeat: Infinity, ease: 'easeInOut', delay: 0.5 },
-                        rotateZ: { duration: 20, repeat: Infinity, ease: 'linear' },
-                        boxShadow: { duration: 4, repeat: Infinity, ease: 'easeInOut' },
-                    }}
-                >
-                    {/* Inner ring 1 */}
-                    <motion.div
-                        className="absolute inset-4 rounded-full border border-cyan-300/40"
-                        animate={{ rotateZ: [0, 360] }}
-                        transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
-                    />
-                    {/* Inner ring 2 */}
-                    <motion.div
-                        className="absolute inset-8 rounded-full border border-cyan-200/50 bg-cyan-400/5"
-                        animate={{ rotateZ: [360, 0] }}
-                        transition={{ duration: 7, repeat: Infinity, ease: 'linear' }}
-                    />
-                    {/* Core glow */}
-                    <div className="absolute inset-0 m-auto w-1/3 h-1/3 rounded-full bg-cyan-400/20 blur-sm" />
-                </motion.div>
-            </div>
-
+        <section id="skills" className="section-padding scroll-mt-20 overflow-hidden">
             <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
+                className="max-w-6xl mx-auto"
             >
-                <h2 className="text-3xl font-bold mb-12 flex items-center">
-                    <span className="text-primary mr-2">02.</span> Skills & Technologies
-                </h2>
+                <div className="flex items-center space-x-3 mb-24">
+                    <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+                        <span className="text-primary font-bold text-xl">✱</span>
+                    </div>
+                    <h2 className="text-sm font-bold tracking-[0.3em] text-[#808080] uppercase">My Stack</h2>
+                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {skillCategories.map((category, i) => (
-                        <motion.div
-                            key={category.title}
-                            initial={{ opacity: 0, y: i % 2 === 0 ? 60 : -60 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: false, margin: '-60px' }}
-                            transition={{ delay: i * 0.08, duration: 0.55, ease: 'easeOut' }}
-                            className="glass-card p-6 group hover:border-primary/50 transition-all duration-300"
-                        >
-                            <div className="flex items-center space-x-3 mb-6">
-                                <div className="p-2 rounded-lg bg-[#2d2d2d] text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                                    {category.icon}
-                                </div>
-                                <h3 className="text-lg font-bold">{category.title}</h3>
-                            </div>
-                            <div className="flex flex-wrap gap-2">
-                                {category.skills.map(skill => (
-                                    <span
-                                        key={skill}
-                                        className="px-3 py-1 text-xs font-medium bg-[#2d2d2d]/70 text-[#cccccc] rounded-lg border border-border hover:border-[#4d4d4d] transition-colors"
+                <div className="space-y-24">
+                    {categories.map((cat, idx) => (
+                        <div key={cat.id} className="grid grid-cols-1 md:grid-cols-[250px_1fr] gap-12 items-start">
+                            {/* Category Label */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: idx * 0.1 }}
+                            >
+                                <h3 className="text-5xl md:text-6xl font-black text-[#1a1a1a] tracking-tighter leading-none select-none hover:text-[#222] transition-colors">
+                                    {cat.id}
+                                </h3>
+                            </motion.div>
+
+                            {/* Skills Grid */}
+                            <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-4">
+                                {cat.skills.map((skill, sIdx) => (
+                                    <motion.div
+                                        key={skill.name}
+                                        initial={{ opacity: 0, y: 10 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: (idx * 0.1) + (sIdx * 0.05) }}
                                     >
-                                        {skill}
-                                    </span>
+                                        <TechIcon {...skill} />
+                                    </motion.div>
                                 ))}
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </motion.div>
