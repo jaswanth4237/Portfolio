@@ -149,7 +149,7 @@ const About = () => {
                 <div className="grid lg:grid-cols-2 gap-16">
                     <div className="space-y-6 text-[#b3b3b3] text-lg">
                         <p>
-                            I am a <span className="text-white">Flutter & Full Stack Developer</span> with a deep interest in Artificial Intelligence and Machine Learning. Currently in my final year of B.Tech, I bridge the gap between clean UI and robust backend architecture.
+                            I am a <span className="text-white">Flutter & Full Stack Developer</span> with a deep interest in Artificial Intelligence and Machine Learning. Currently in my Final year of B.Tech, I bridge the gap between clean UI and robust backend architecture.
                         </p>
                         <p>
                             I enjoy building real-world applications that solve practical problems, following industry standards like <span className="text-white">MVVM, Clean Architecture, and Event Sourcing</span>.

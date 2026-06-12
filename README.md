@@ -3,7 +3,7 @@
 A visually stunning, fully responsive personal portfolio designed with deep-sea aesthetics, dynamic animations, and a seamless user experience. Built using React, Vite, Tailwind CSS, and Framer Motion.
 
 ## 🚀 Live Demo
-*(Insert your Live Vercel/Netlify URL here)*
+*https://vasamsettijaswanth.vercel.app/*
 
 ## 🛠️ Tech Stack
 - **Frontend**: React (Vite)
