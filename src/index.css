@@ -45,6 +45,29 @@ body {
   }
 }
 
+/* Responsive Breakpoints (Explicit Media Queries) */
+/* Mobile (already base) */
+@media (min-width: 640px) {
+  /* SM */
+}
+
+@media (min-width: 768px) {
+
+  /* MD - Tablet */
+  .section-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* LG - Desktop */
+}
+
+@media (min-width: 1280px) {
+  /* XL - Large Desktop */
+}
+
 /* Accessibility: Prefers Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
 

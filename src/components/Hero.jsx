@@ -75,6 +75,7 @@ const Hero = () => {
                             <img
                                 src="/profile.jpg"
                                 alt="Jaswanth"
+                                loading="lazy"
                                 className="w-full h-full object-cover"
                             />
                             {/* Inner glowing facets */}
