@@ -17,42 +17,42 @@ const Projects = () => {
             description: "Cross-platform app connecting farmers with buyers. Features live market prices, weather updates, and role-based login.",
             tech: ["Flutter", "Dart", "Firebase"],
             icon: <Smartphone size={24} />,
-            github: "https://github.com/jaswanth4237/agri-connect-flutter"
+            github: "https://github.com/jaswanth4237/Flutter-Codes/tree/main/smart_agri_connect"
         },
         {
             title: "Nexus - DSA Learning",
             description: "Learning platform with DSA visualization, AI chatbot, and progress tracking system.",
             tech: ["Flutter", "Firebase", "REST API"],
             icon: <Package size={24} />,
-            github: "https://github.com/jaswanth4237/nexus-dsa-learning"
+            github: "https://github.com/jaswanth4237"
         },
         {
             title: "Real Estate MVVM",
             description: "Production-grade property listing app with offline-first storage and Clean Architecture.",
             tech: ["Flutter", "Hive", "Bloc", "CI/CD"],
             icon: <Smartphone size={24} />,
-            github: "https://github.com/jaswanth4237/flutter-real-estate-architecture"
+            github: "https://github.com/jaswanth4237/real_estate_mvvm_app"
         },
         {
             title: "Bank Account ES/CQRS",
             description: "Backend system with Event Sourcing and CQRS. Full audit trail, snapshotting, and read projections.",
             tech: ["Node.js", "PostgreSQL", "Docker", "CQRS"],
             icon: <Database size={24} />,
-            github: "https://github.com/jaswanth4237/bank-account-es-cqrs"
+            github: "https://github.com/jaswanth4237/bank-account-es-cqrs-api"
         },
         {
             title: "Blog API",
             description: "RESTful backend with MVC architecture and relational design. Full CRUD and Sequelize ORM integration.",
             tech: ["Node.js", "Express", "MySQL", "Sequelize"],
             icon: <Server size={24} />,
-            github: "https://github.com/jaswanth4237/blog-api-node"
+            github: "https://github.com/jaswanth4237/Blog-API"
         },
         {
             title: "Adaptive UI System",
             description: "Flutter app demonstrating advanced UI engineering with adaptive breakpoints and custom gestures.",
             tech: ["Flutter", "Dart", "Docker"],
             icon: <Smartphone size={24} />,
-            github: "https://github.com/jaswanth4237/flutter-adaptive-ui"
+            github: "https://github.com/jaswanth4237"
         }
     ];
 
