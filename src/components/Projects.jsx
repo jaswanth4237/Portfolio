@@ -52,7 +52,21 @@ const Projects = () => {
             description: "Flutter app demonstrating advanced UI engineering with adaptive breakpoints and custom gestures.",
             tech: ["Flutter", "Dart", "Docker"],
             icon: <Smartphone size={24} />,
-            github: "https://github.com/jaswanth4237"
+            github: "https://github.com/jaswanth4237/adaptive_ui_system"
+        },
+        {
+            title: "Mini SQL Engine",
+            description: "A lightweight SQL execution engine supporting basic CRUD, filtering, and indexing logic written in Python.",
+            tech: ["Python", "SQL", "Data Structures"],
+            icon: <Database size={24} />,
+            github: "https://github.com/jaswanth4237/mini_sql_engine"
+        },
+        {
+            title: "Multi-Task NLP",
+            description: "Advanced NLP system for multi-task learning including sentiment analysis and named entity recognition.",
+            tech: ["Python", "PyTorch", "Transformers", "NLP"],
+            icon: <Server size={24} />,
+            github: "https://github.com/jaswanth4237/multi-task-nlp"
         }
     ];
 
