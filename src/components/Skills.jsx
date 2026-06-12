@@ -22,8 +22,8 @@ const Skills = () => {
     const categories = [
         {
             id: "MOBILE",
-            gradient: "from-blue-500/20 to-cyan-500/10",
-            textGradient: "from-blue-400 via-cyan-400 to-sky-500",
+            gradient: "from-blue-500/30 to-cyan-500/20",
+            textGradient: "from-blue-300 via-cyan-300 to-sky-400",
             skills: [
                 { name: "flutter", color: "02569B", label: "Flutter" },
                 { name: "dart", color: "0175C2", label: "Dart" },
@@ -34,8 +34,8 @@ const Skills = () => {
         },
         {
             id: "BACKEND",
-            gradient: "from-emerald-500/10 to-green-500/5",
-            textGradient: "from-emerald-400 via-green-400 to-teal-500",
+            gradient: "from-emerald-500/20 to-green-500/10",
+            textGradient: "from-emerald-300 via-green-300 to-teal-400",
             skills: [
                 { name: "nodedotjs", color: "339933", label: "Node.js" },
                 { name: "express", color: "ffffff", label: "Express.js" },
@@ -46,8 +46,8 @@ const Skills = () => {
         },
         {
             id: "DATABASE",
-            gradient: "from-purple-500/10 to-pink-500/5",
-            textGradient: "from-purple-400 via-pink-400 to-fuchsia-500",
+            gradient: "from-purple-500/20 to-pink-500/10",
+            textGradient: "from-purple-300 via-pink-300 to-fuchsia-400",
             skills: [
                 { name: "mysql", color: "4479A1", label: "MySQL" },
                 { name: "postgresql", color: "4169E1", label: "PostgreSQL" },
@@ -59,8 +59,8 @@ const Skills = () => {
         },
         {
             id: "DEV OPS",
-            gradient: "from-orange-500/10 to-yellow-500/5",
-            textGradient: "from-orange-400 via-yellow-400 to-amber-500",
+            gradient: "from-orange-500/20 to-yellow-500/10",
+            textGradient: "from-orange-300 via-yellow-300 to-amber-400",
             skills: [
                 { name: "docker", color: "2496ED", label: "Docker" },
                 { name: "git", color: "F05032", label: "Git" },
@@ -96,8 +96,8 @@ const Skills = () => {
                                 transition={{ delay: idx * 0.1, duration: 0.8 }}
                                 className="relative group"
                             >
-                                <div className={`absolute -inset-8 bg-gradient-to-r ${cat.gradient} blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
-                                <h3 className={`text-6xl md:text-8xl font-black tracking-tighter leading-none select-none bg-gradient-to-br ${cat.textGradient} bg-clip-text text-transparent opacity-20 group-hover:opacity-100 transition-all duration-700`}>
+                                <div className={`absolute -inset-10 bg-gradient-to-r ${cat.gradient} blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
+                                <h3 className={`text-6xl md:text-8xl font-black tracking-tighter leading-none select-none bg-gradient-to-br ${cat.textGradient} bg-clip-text text-transparent opacity-40 group-hover:opacity-100 group-hover:drop-shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-all duration-700`}>
                                     {cat.id}
                                 </h3>
                             </motion.div>
