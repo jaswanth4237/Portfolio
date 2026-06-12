@@ -87,17 +87,17 @@ const Skills = () => {
 
                 <div className="space-y-32">
                     {categories.map((cat, idx) => (
-                        <div key={cat.id} className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-16 items-center">
+                        <div key={cat.id} className="grid grid-cols-1 xl:grid-cols-[380px_1fr] gap-10 lg:gap-16 items-center">
                             {/* Category Label with Glow and Gradient */}
                             <motion.div
                                 initial={{ opacity: 0, x: -50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1, duration: 0.8 }}
-                                className="relative group"
+                                className="relative group overflow-visible"
                             >
                                 <div className={`absolute -inset-10 bg-gradient-to-r ${cat.gradient} blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
-                                <h3 className={`text-6xl md:text-8xl font-black tracking-tighter leading-none select-none bg-gradient-to-br ${cat.textGradient} bg-clip-text text-transparent opacity-40 group-hover:opacity-100 group-hover:drop-shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-all duration-700`}>
+                                <h3 className={`text-5xl md:text-7xl font-black tracking-tighter leading-none select-none bg-gradient-to-br ${cat.textGradient} bg-clip-text text-transparent opacity-40 group-hover:opacity-100 group-hover:drop-shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-all duration-700 whitespace-nowrap`}>
                                     {cat.id}
                                 </h3>
                             </motion.div>
